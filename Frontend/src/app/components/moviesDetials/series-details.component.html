@@ -1,0 +1,20 @@
+<div class="card my-5 bg-light">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="seriesDetails.poster" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{seriesDetails.title}}</h5>
+        <p class="card-text">date: {{seriesDetails.year}}</p>
+        <p class="card-text">vote average: {{seriesDetails.rating}}</p>
+        <p class="card-text">{{seriesDetails.plot}}</p>
+        <div>genres:
+          <span *ngFor="let genre of seriesDetails.genre" class="badge bg-success p-2 mx-1">
+            {{genre}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
